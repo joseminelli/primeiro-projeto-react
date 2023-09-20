@@ -4,15 +4,15 @@ function formatDate(date) {
   return date.toLocaleDateString();
 }
 
-function Comment(props) {
+function Comment({author, text, date}){
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <h2>{props.author.name}</h2>
-        <h3>{props.text}</h3>
-        <p>{formatDate(props.date)}</p>
+        <h2>{author.name}</h2>
+        <h3>{text}</h3>
+        <p>{formatDate(date)}</p>
       </div>
-      <img src={props.author.avatarUrl} alt={props.author.name} />
+      <img src={author.avatarUrl} alt={author.name} />
     </div>
   );
 }
