@@ -1,10 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.comments .Comment:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.144);
 }
 
+.comments .Comment:nth-child(even) {
+  background-color: transparent;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,7 +37,49 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.UserInfo p {
+  margin: 0em;
+}
+.UserInfo h2 {
+  margin: 0em 0 0 0;
+}
+.UserInfo h3 {
+  margin: 0.3em 0 0.3em 0;
+}
+.Comment {
+  width: 500px !important;
+  margin-left: 100px;
+  border-radius: 25px;
+  padding: 0.5rem;
+  width: auto;
+  display: flex;
+  justify-content: right;
+  color: #888;
+  font-size: 0.8em;
+}
+.Comment img {
+  display: flex;
+  margin-left: 5% !important;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 0.5em;
+}
+.button {
+  border: 1px solid #f9f9f9;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  border: 1px solid transparent;
+  background-color: #646cffaa;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,4 +101,35 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: auto !important;
+    margin-right: 0;
+  }
+  .Comment {
+    margin: 0;
+    align-items: center;
+    width: 120% !important;
+    justify-content: center;
+  }
+  .Comment img {
+    margin: 0;
+    width: 75px;
+    height: 75px;
+  }
+  .UserInfo {
+    margin-top: 1em;
+  }
+  .comments {
+    margin-top: 1em;
+  }
+  .logo {
+    height: 4em;
+  }
+  .card {
+    margin-top: 1em;
+  }
 }

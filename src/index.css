@@ -58,7 +58,7 @@ button:focus-visible {
 .linha{
   border-bottom: 1px solid #363636;
 }
-.content{
+.box{
   margin-top: 30%;
   display: flex;
   flex-direction: column;
