@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import MenuComp from './Menu';
-import './ant.css'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Card1 from './componente/Card1'
 
-const App = () => {
-  const [theme, setTheme] = useState('light'); // Defina o tema inicial
-
-  const handleThemeChange = (checked) => {
-    setTheme(checked ? 'dark' : 'light');
-  };
+function App() {
 
   return (
-    <div style={{ background: theme === 'dark' ? '#282828' : '#ffffff' }} id='menuBar'>
-      <MenuComp theme={theme} onThemeChange={handleThemeChange} />
-    </div>
-  );
-};
+    <>
+     <Card1
+      min = {1}
+      max = {60}
+     > </Card1>
+    </>
+  )
+}
 
-export default App;
+export default App
