@@ -22,11 +22,7 @@ function App() {
           {" "}
         </Card1>
         <div className="comments">
-            <Comment
-              date={comment.date}
-              text={comment.text}
-              author={comment.author}
-            />
+            <Comment/>
         </div>
       </div>
       <Modal />
